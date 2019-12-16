@@ -1,0 +1,35 @@
+<html>
+<head>
+<!--버튼에 대한 클릭이벤트 작성-->
+<script language="javascript">
+//자세히보기 function
+function moveClose() {
+  opener.location.href="./etc/view.php?bno=1";
+  self.close();
+ }
+</script>
+ <script language="javascript"> 
+// === 쿠키값 저장하기=== 
+function setCookie(name, value) {
+   var todayDate = new Date();
+   todayDate.setHours(24);
+   document.cookie = name + "=" + escape( value ) + "; path=/; expires=" +   todayDate.toGMTString() + ";";
+   self.close();
+    }
+
+</script>
+</head>
+
+<body>
+
+<a href="www.naver.com">
+ <img class="d-block img-fluid" src="http://file.bodnara.co.kr/logo/insidelogo.php?image=%2Fhttp%3A%2F%2Ffile.bodnara.co.kr%2Fwebedit%2Fnews%2F2010%2F1346324627-ne1.jpg">
+</a>
+<span style="float:right">
+<input type="button" value="닫 기" onclick="self.close();"/>
+</span>
+<input type="button" value="자세히 보기" onclick="moveClose();"/>
+<input type="button" value="24시간동안 보지 않기" onclick="setCookie('popup','no')"/>
+</body>
+
+</html>
